@@ -1,0 +1,27 @@
+/*
+  Global CSS custom properties.
+*/
+
+:root {
+  --color--come: #00B8EB;
+  --color--lightgray: #f6f6f6;
+  --color--bordergray: #d1d1d1;
+  --color--thgray: #949494;
+  --color--accent: #ff8983;
+  --color--txtwbg: white;
+  --color--pflo--salmon: #ff8983;
+  --color--pflo--green: #6ba57c;
+  --color--pflo--blue: #599ed3;
+  --color--pflo--red: #d35959;
+  --color--pflo--orange: #e7a342;
+  --color--pflo--purple: #b182c7;
+  --color--pflo--gray: #3f3f3f;
+  --color--pflo--uwblue:#00447C;
+
+  --color--hc--yellow: #FFFF00;
+
+  /* Overriding Claro colors */
+  --color-absolutezero: var(--color--pflo--salmon);
+  --color-absolutezero-hover: var(--color--pflo--uwblue);
+  --color-focus: var(--color--pflo--salmon);
+}

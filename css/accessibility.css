@@ -1,0 +1,75 @@
+/* ACCESSIBILITY FEATURES */
+  /* Larger font size */
+  
+  body.larger-text, body .larger-text{
+    font-size: 16px !important;
+  }
+
+  /* Smaller font size */
+
+  body.smaller-text, body .smaller-text{
+    font-size: 12px !important;
+  }
+  
+
+  /* High contrast */
+
+body.high-contrast *{
+  color: var(--color--hc--yellow);
+  background-color: black;
+  --color--txtwbg: var(--color--hc--yellow);
+  --color--accent: black; 
+  --color-bordergray: var(--color--hc--yellow);
+  --color--pflo--salmon: var(--color--hc--yellow);
+
+}
+
+body.high-contrast a {
+  text-decoration: underline;
+}
+
+body.high-contrast a:hover, body.high-contrast a:focus {
+  text-decoration: none;
+  background:none;
+}
+
+body.high-contrast #toggle-high-contrast {
+  text-decoration: none;
+}
+
+body.high-contrast a#toggle-high-contrast:hover {
+  color: #FFFF00;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+body.high-contrast .ep-usr-name{
+  background-image: none;
+}
+
+body.high-contrast button:hover{
+  color:var(--color--hc--yellow);
+  border: 2px dashed var(--color--hc--yellow);
+  text-decoration: underline;
+}
+
+ body.high-contrast #contact-info img {
+  filter:grayscale(100%) brightness(10);
+} 
+
+/* body.high-contrast #block-thmpflo-branding-2 *, body.high-contrast #block-thmpflo-fundatorzy *, body.high-contrast #block-thmepc-fundatorzy *{
+  background-color: white;
+} */
+body.high-contrast header.content-header *{
+  background-color: white;
+  #block-thmepc-local-tasks *{
+    background-color: black;
+    color: var(--color--hc--yellow);
+  }
+}
+
+
+
+body.path-frontpage.high-contrast div.region-content {
+  background-image:none;
+}

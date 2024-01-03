@@ -1,0 +1,182 @@
+@media screen and (max-width:768px) {
+    #block-thmpflo-account-menu .menu--account {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+}
+
+
+/* Branding: logos shortening and widening */
+
+@media screen and (max-width:768px) {
+    #logo-uw-mobile {
+      display:inline-block;
+      background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-mobile.svg);
+      background-position:left center;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      height: 59px;
+      width: 60px;
+      float: left;
+    }
+   
+    #logo-uw-full {
+      display: none;
+    }
+  
+    #logo-ep-full {
+      display:none;
+    }
+  
+      #logo-ep-mobile {
+      display: inline-block;
+      background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-v2.svg");
+      background-size: auto 100%;
+      height: 59px;
+      width: 200px;
+      margin-left:20px;
+      background-repeat: no-repeat;
+    }  
+    @media screen and (max-width: 700px) {
+      body.path-frontpage div.region-content { 
+        background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+        background-position: 120% 0%, right;
+        background-repeat: no-repeat;
+        background-size: auto, auto 100%;
+        background-blend-mode: normal;
+      }
+    
+      #logo-uw-full::after {
+        content: " ";
+        float: right;
+        position: relative;
+        top: 10px;
+        height: 52px;
+        width: 20px;
+        border-right: 1px solid var(--color--bordergray);
+        
+      }
+  
+      #contact-info {
+        flex-direction: column;
+      }
+  
+      @media screen and (max-width:600px) {
+        #logo-ep-mobile {
+          width: 60px;
+        }
+        body.path-frontpage div.region-content {
+          background-image:url(../files/plama.svg), url("../files/ludz.svg");
+          background-position: right, 350px 0%;
+          background-size: auto 100%, auto;
+          background-blend-mode: hard-light;
+          
+        }
+  
+        @media screen and (max-width:435px) {
+          #logo-ue {
+            height: 59px;
+            width: 100px;
+            object-fit: cover;
+            object-position: right;
+          }
+          body.path-frontpage div.region-content {
+            background-position: right, 220px 0%;
+          }
+  
+            @media screen and (max-width:360px) {
+              body.path-frontpage div.region-content {
+                background-position: right, 120px 0%;
+              }
+  
+            }
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width:769px) {
+    body {
+      margin-top: 0;
+    }
+    
+    #logo-uw-mobile {
+      display: none;
+    }
+    
+    #logo-ep-mobile {
+      display:none;
+    }
+  
+    #logo-ep-full {
+      display:inline-block;
+      background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-v2.svg");
+      width: 200px;
+      margin-left:20px;
+     }
+  
+     body.path-user #logo-ep-full-bez-sygnetu, body.path-portfolio #logo-ep-full-bez-sygnetu {
+      display:inline-block;
+      background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-bez-sygnetu-v4.svg");
+      width: 150px;
+      height: 30px;
+      margin-top: 20px;
+      margin-left: 10px;
+      background-repeat: no-repeat;
+     }
+  
+     /* #logo-uw-full {
+      background-image: url(/themes/contrib/thmpflo/files/logo/logo-uw-full.svg);
+      width: 156px; */
+    
+     #logo-uw-full {
+      background-image: url(/themes/contrib/thmpflo/files/logo/UW_uproszczony.svg);
+      width: 156px;
+      
+     /* #logo-uw-full {
+      background-image: url(/themes/contrib/thmpflo/files/logo/logo_uw_v2.png);
+      width: 156px; */
+    
+    }
+    #logo-uw-full::after {
+      content: " ";
+      float: right;
+      position: relative;
+      top: 10px;
+      height: 52px;
+      width: 20px;
+      border-right: 1px solid var(--color--bordergray);
+      
+    }
+  
+  }
+  
+  
+  
+  
+  #logo-uw-full, #logo-ep-full {
+    background-position:left center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    float: left;
+    height: 59px;
+  }
+  
+
+  div.page-wrapper header.content-header, div.page-wrapper div.layout-container main div.region-content > div:not(#block-thmepc-informacjekontaktowe), div.page-wrapper div.layout-container main div.region-content #contact-info{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  
+    @media screen and (min-width:768px) {
+      width:750px;
+    }
+    @media screen and (min-width:992px) {
+      width:970px;
+    }
+    @media screen and (min-width:1200px) {
+      width:1170px;
+    }
+  }

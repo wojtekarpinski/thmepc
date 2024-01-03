@@ -1,0 +1,5 @@
+# Schema for the configuration files of the ePortfolio theme.
+
+thmepc.settings:
+  type: theme_settings
+  label: 'ePortfolio settings'

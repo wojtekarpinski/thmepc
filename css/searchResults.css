@@ -1,0 +1,24 @@
+/* Search results */
+
+#search-results {
+    width: 100%;
+  }
+  
+  #search-results td, #search-results th {
+    padding: 1rem;
+  }
+  
+  #search-results tr:nth-child(even) {
+    background-color: var(--color--lightgray);
+  }
+  
+  #search-results tr:hover {
+    background-color: var(--color--accent);
+    color: var(--color--txtwbg);
+  }
+  
+  #search-results th {
+    color: var(--color--thgray);
+    font-weight: 400;
+    background-color: var(--color--txtwbg);
+  }

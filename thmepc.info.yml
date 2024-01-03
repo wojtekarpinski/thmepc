@@ -1,0 +1,21 @@
+name: 'ePortfolio/Claro'
+type: theme
+base theme: 'claro'
+core_version_requirement: ^9.5 || ^10
+description: 'Custom theme for ePortfolio site, based on the <em>Claro</em> theme. Created by <a href="https://ckc.uw.edu.pl/">CKC UW</a>.'
+package: 'ePortfolio'
+version: '10.x-2.0'
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+
+libraries:
+  - 'thmepc/global-styling'

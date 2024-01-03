@@ -1,0 +1,21 @@
+global-styling:
+  version: '10.x-2.0'
+  css:
+    theme:
+      css/variables.css: {}
+      css/base.css: {}
+      css/responsive.css: {}
+      css/utilities.css: {}
+      css/accessibility.css: {}
+      css/editUser.css: {}
+      css/showUser.css: {}
+      css/searchResults.css: {}
+      css/icomoon.css: {}
+  js:
+      scripts/searchSelect.js: {}
+      # scripts/responsive-portfolio.js: {}
+      scripts/toggleHighContrast.js: {}
+      scripts/toggleLargerText.js: {}
+      scripts/toggleSmallerText.js: {}
+
+

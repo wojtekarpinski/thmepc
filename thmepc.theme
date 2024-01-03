@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the ePortfolio theme.
+ */
+
+
+/**
+ * Implements hook_preprocess_HOOK () for HTML document templates.
+ */
+function thmepc_preprocess_html (&$vars)
+{
+  
+}

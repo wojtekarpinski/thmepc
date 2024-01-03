@@ -1,0 +1,442 @@
+/**
+ * @file
+ * Generic base elements.
+ */
+
+
+
+
+
+
+/* Homepage, navbar and footer branding and looks */
+
+html body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size:14px;
+}
+
+.about {
+  margin-top: 1.5em;
+  font-size:20px;
+}
+
+#toggle-high-contrast{
+  font-size: 32px;
+}
+
+#toggle-high-contrast:hover{
+  color: var(--color--accent);
+}
+
+#toggle-high-contrast:focus{
+  background:none;
+}
+
+
+#ep-nav > * {
+  padding-left:10px;
+}
+
+div[data-off-canvas-main-canvas=""] {
+  min-height:100vh;
+  margin:0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+#block-thmpflo-branding {
+  margin-bottom:2em;
+}
+
+.navbar-default .navbar-brand {
+  color: var(--color--come);
+}
+
+#frontpage-content{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body.path-frontpage #search-container {
+  width: 69%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+/* Menu konta użytkownika */
+  #block-thmepc-nawigacja {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+
+  #block-thmepc-nawigacja::after {
+    content: "";
+    clear: both;
+  }
+
+  #block-thmepc-menukontauzytkownika ul {
+
+    display: table;
+    content: " ";
+    float: right;
+    margin-right: -15px;
+    margin-top:-15px;
+    min-height: 50px;
+
+    a {
+      float: right;
+      padding: 15px;
+      line-height: 20px;
+    }
+    
+    a, a:hover, a:focus {
+      text-decoration: none;
+      color: var(--color--pflo--uwblue);
+      border:none;
+      outline: none;
+      box-shadow: none;
+    }
+
+    #toggle-high-contrast:hover {
+      color: var(--color--pflo--salmon);
+    }
+
+    li:hover {
+      background-color: var(--color--bordergray);
+    }
+    li.text-size:hover {
+      background-color:white;
+    }
+    li.text-size a:hover {
+      color:var(--color--pflo--salmon);
+    }
+
+    li.menu-item {
+      float:left;
+      list-style: none;
+      padding:0;
+    }
+
+    
+    li.text-size a{
+      padding-left: 1px;
+    }
+    li.text-size:not(:last-child) a{
+      padding-right: 2px;
+    }
+    
+    #toggle-regular-text {
+      font-size: 14px;
+    }
+    #toggle-smaller-text {
+      font-size: 12px;
+    }
+    #toggle-larger-text {
+      font-size: 16px;
+    }
+
+  }
+
+  body.larger-text #block-thmepc-menukontauzytkownika ul li.text-size {
+    #toggle-larger-text {
+      text-decoration: underline; 
+    }
+    #toggle-smaller-text {
+      text-decoration: none;
+    }
+    #toggle-regular-text {
+      text-decoration: none; 
+    }
+  }
+  body.smaller-text #block-thmepc-menukontauzytkownika ul li.text-size {
+    #toggle-smaller-text {
+      text-decoration: underline;
+    }
+    #toggle-larger-text {
+      text-decoration: none; 
+    }
+    #toggle-regular-text {
+      text-decoration: none; 
+    }
+  }
+
+  body:not(.smaller-text):not(.larger-text) #block-thmepc-menukontauzytkownika ul li.text-size #toggle-regular-text{
+    text-decoration: underline;
+  } 
+
+
+
+/* Dodanie tła na cały region-content */
+
+@media screen and (min-width:700px) {
+  body.path-frontpage div.region-content { 
+    background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto, auto 100%;
+  }
+  
+}
+
+/* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
+footer.container-fluid { 
+  padding-left: 0;
+  padding-right: 0;
+  width:100%;
+}
+
+#block-thmpflo-informacjekontaktowe {
+  background-color: var(--color--lightgray);
+}
+/* CLARO HEADER */
+
+body header.content-header {
+  background-color: white;
+}
+
+
+#block-thmepc-informacjekontaktowe {
+  width: 100vw;
+  margin-right: -3rem;
+  margin-left: -3rem;
+  background-color: var(--color--lightgray);
+
+  address {
+    font-style: normal;
+  }
+}
+
+
+/* ul, li */
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  color:white;
+  background-color: var(--color--accent);
+}
+
+/* Buttons */
+
+/* .btn-salmon {
+  color:white;
+  background-color: var(--color--accent);
+} */
+
+button.sidebar {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: var(--color--bordergray);
+  background-color: var(--color--lightgray);
+}
+
+button.sidebar:focus {
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  border-color: var(--color--accent);
+  color: var(--color--txtwbg);
+  background-color: var(--color--accent);
+}
+
+button.btn-primary, button.btn-primary:active, button.btn-primary:focus, button.btn-primary:visited {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: var(--color--bordergray);
+  background-color: var(--color--accent) !important;
+  color:var(--color--txtwbg);
+}
+
+button.btn-primary:hover {
+  border-color: var(--color--bordergray);
+  background-color: var(--color--accent);
+  color:var(--color--txtwbg);
+  filter:brightness(0.98);
+}
+
+button.btn-salmon {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: var(--color--bordergray);
+  background-color: var(--color--accent);
+  color:var(--color--txtwbg);
+}
+
+button.btn-uw {
+  margin: 2px;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0;
+  border-style: solid; 
+  border-width: 2px;
+  border-color: var(--color--uwblue);
+  background:none;
+}
+
+button:hover {
+  filter:brightness(0.98);
+}
+
+button.btn-uw:hover {
+  color: var(--color--accent);
+  border-color: var(--color--accent);
+  filter:brightness(1);
+}
+
+
+/* Search forms */
+
+div #search {
+  width: 66.66%;
+}
+
+input.form-control {
+  padding: 1rem;
+  border-radius: 5px;
+  border: solid 1px var(--color--bordergray);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input.form-control:focus {
+  outline:none;
+  border-color: var(--color--accent);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(255,137,131, 0.6) ;
+}
+
+/* button[type="submit"] {
+  width: 25%;
+} */
+
+#search-selector {
+  width: 100%;
+  text-align: right;
+  border: none 1px;
+  border-top-style: solid;
+  border-color: var(--color--bordergray);
+  background: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#advanced-search {
+  display: none;
+}
+
+
+
+/* e-P view list styling */
+
+#block-cci-ep-sections {
+  width: 33.333333333%;
+}
+
+div.cci-idx > ul {
+  list-style:none;
+  padding-left: 0;
+}
+
+.cci-idx a {
+  cursor:pointer;
+  position:relative;
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.cci-idx a:hover {
+  background-color: var(--color--lightgray);
+  text-decoration: none;
+}
+
+.cci-idx a.cci-selected {
+  background-color: var(--color--accent);
+  color: var(--color--txtwbg);
+  border: 1px solid var(--color--bordergray);
+}
+
+.cci-expanded {
+  position:relative;
+  float: right;
+  width: 66.6666666%;
+  border: 1px solid var(--color--bordergray);
+  border-radius: 0 4px 4px;
+  padding: 10px 25px;
+}
+
+/* Bajery */
+
+.cci-expanded:after {
+  content: "";
+  height: 70px;
+  width: 1px;  
+  position: absolute;  
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(
+    transparent,
+    var(--color--accent),
+    transparent
+  );
+  opacity: 0;
+}
+
+.cci-expanded:after {  
+  top: 65%;
+  opacity: 0;
+}
+
+.cci-expanded:hover:after {
+  top:25%;
+  opacity: 1;
+}
+
+/*  */
+
+.ep-sg-mobile {
+  display: block !important;
+  background-color: var(--color--accent);
+  color:var(--color--txtwbg);
+  padding: 0.5em 0 0.5em 1em;
+  border-radius: 5px;
+  border: 1px solid var(--color--bordergray);
+}
+
+/* FIXES */
+
+/* Display label of form when multiple field instances */
+
+.label > h4 {
+  color:#333;
+  font-size: 14px;
+}
+
+
+/* Content Containers Indexator */
+
+/* ---- TEST only ---- */
+.pudlo:not(.cci-expanded),
+.paka:not(.cci-expanded) {
+  display: none;
+}
+
+body.path-portfolio .ep-sub-group:not(.cci-expanded) {
+  display: none;
+}
+
+

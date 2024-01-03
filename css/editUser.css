@@ -1,0 +1,75 @@
+/* User edit form vertical tabs */
+
+body.path-user #user-form .vertical-tabs__menu-link-content strong{
+    font-weight: normal;
+  }
+  
+  body.path-user #user-form li.is-selected a {
+    background-color: var(--color--accent);
+    color: var(--color--txtwbg);
+  }
+
+/* User edit form preferred colors */
+
+
+#edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"] {
+    position:relative;
+    padding-left: 25px;
+  }
+  
+  #edit-field-usr-profile-color--wrapper label[for^="edit-field-usr-profile-color-"]::before {
+    content:"";
+    position:absolute;
+    height: 20px;
+    width: 20px;
+    left:0
+  }
+  
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-default"]::before {
+    background-color: var(--color--pflo--salmon);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-green"]::before {
+    background-color: var(--color--pflo--green);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-blue"]::before {
+    background-color: var(--color--pflo--blue);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-uwblue"]::before {
+    background-color: var(--color--pflo--uwblue);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-red"]::before {
+    background-color: var(--color--pflo--red);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-orange"]::before {
+    background-color: var(--color--pflo--orange);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-purple"]::before {
+    background-color: var(--color--pflo--purple);
+  }
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-gray"]::before {
+    background-color: var(--color--pflo--gray);
+  }
+  
+  /* Hiding empty radio */
+  
+  #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-none"] {
+    display: none;
+  }
+  
+  
+  /* USER elements spacing */
+  
+  body.path-user div[class*="field--name-field-usr-"]:not(#usr-pers-data div[class*="field--name-field-usr-"]) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  body.path-user .panel-body {
+    padding-top: 0;
+  }
+  
+  body.path-user div.tab-content div.field:nth-child(n+1) div.field--item {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+  }
