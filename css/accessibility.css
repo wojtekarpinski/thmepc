@@ -21,6 +21,8 @@ body.high-contrast *{
   --color--accent: black; 
   --color-bordergray: var(--color--hc--yellow);
   --color--pflo--salmon: var(--color--hc--yellow);
+  --color-focus: var(--color--hc--yellow);
+  --color-absolutezero: var(--color--hc--yellow);
 
 }
 
@@ -60,7 +62,22 @@ body.high-contrast button:hover{
 /* body.high-contrast #block-thmpflo-branding-2 *, body.high-contrast #block-thmpflo-fundatorzy *, body.high-contrast #block-thmepc-fundatorzy *{
   background-color: white;
 } */
-body.high-contrast header.content-header *{
+body.high-contrast header{
+  background-color: black;
+}
+
+body.high-contrast #block-thmepc-menukontauzytkownika ul.menu li a{
+  color: var(--color--hc--yellow);
+  text-decoration: underline;
+}
+
+body.high-contrast #block-thmepc-menukontauzytkownika ul.menu li a:hover, body.high-contrast ul li > a:hover{
+  background-color: black !important;
+  color: var(--color--hc--yellow) !important;
+  text-decoration: none;
+}
+
+body.high-contrast header.content-header #block-thmepc-brandingwidokportfolio * {
   background-color: white;
   #block-thmepc-local-tasks *{
     background-color: black;
