@@ -29,7 +29,7 @@
       display:none;
     }
   
-      #logo-ep-mobile {
+    #logo-ep-mobile {
       display: inline-block;
       background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-v2.svg");
       background-size: auto 100%;
@@ -37,7 +37,22 @@
       width: 200px;
       margin-left:20px;
       background-repeat: no-repeat;
-    }  
+    }
+
+    #logo-ep-mobile-bez-sygnetu {
+      display:inline-block;
+      background-image: url("/themes/contrib/thmpflo/files/logo/logo-eportfolio-bez-sygnetu-v4.svg");
+      width: 150px;
+      height: 30px;
+      margin-top: 20px;
+      margin-left: 10px;
+      background-repeat: no-repeat;
+    }
+
+    #block-thmpflo-fundatorzy img{
+      max-width: 25%;
+    }
+
     @media screen and (max-width: 700px) {
       body.path-frontpage div.region-content { 
         background-image:url("../files/ludz.svg"), url(../files/plama.svg);
@@ -73,28 +88,47 @@
           background-blend-mode: hard-light;
           
         }
-  
-        @media screen and (max-width:435px) {
-          #logo-ue {
-            height: 59px;
-            width: 100px;
-            object-fit: cover;
-            object-position: right;
+
+        @media screen and (max-width:557px) {
+
+          #usr-name-surname-title {
+            padding-left: 10px;
+            padding-right: 10px;
           }
-          body.path-frontpage div.region-content {
-            background-position: right, 220px 0%;
+
+          #usr-name-surname-title .field--name-field-usr-firstname {
+            margin-top: 10px;
           }
-  
-            @media screen and (max-width:360px) {
-              body.path-frontpage div.region-content {
-                background-position: right, 120px 0%;
-              }
-  
+
+          #block-thmpflo-fundatorzy img{
+            max-width: 50%;
+          }
+
+          
+
+          @media screen and (max-width:435px) {
+            #logo-ue {
+              height: 59px;
+              width: 100px;
+              object-fit: cover;
+              object-position: right;
             }
+            body.path-frontpage div.region-content {
+              background-position: right, 220px 0%;
+            }
+    
+              @media screen and (max-width:360px) {
+                body.path-frontpage div.region-content {
+                  background-position: right, 120px 0%;
+                }
+    
+              }
+          }
         }
       }
     }
   }
+  
   
   @media screen and (min-width:769px) {
     body {
