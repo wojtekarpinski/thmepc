@@ -26,7 +26,7 @@ body.path-user #user-form .vertical-tabs__menu-link-content strong{
   }
   
   #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-default"]::before {
-    background-color: var(--color--pflo--salmon);
+    background-color: #ff8983; /* Not a variable for correct high contrast displaying */
   }
   #edit-field-usr-profile-color--wrapper label[for="edit-field-usr-profile-color-green"]::before {
     background-color: var(--color--pflo--green);
