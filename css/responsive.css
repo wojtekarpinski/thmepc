@@ -214,3 +214,23 @@
       width:1170px;
     }
   }
+
+  /* User profile styling */
+    
+
+  @media screen and (max-width:641px) {
+    /* Collapsibles colouring */
+    body.path-user div[id*="edit-group-usr-dsp-"] > div > a[aria-expanded="true"] {
+      background-color: var(--color--accent);
+      color: var(--color--txtwbg);
+    }
+
+    /* Making space for jobs, contact and links */
+
+    body.path-user #usr-name-surname-title {
+      min-height: inherit;
+    }
+
+    body.path-user #usr-jobs-contact-links {
+      min-width: 100%;
+    }
