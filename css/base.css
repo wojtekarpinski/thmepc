@@ -85,60 +85,64 @@ body.path-frontpage #search-container {
     margin-right: -15px;
     margin-top:-15px;
     min-height: 50px;
+    list-style:none !important;
+    
+  }
 
-    a {
+  #block-thmepc-menukontauzytkownika ul a {
       float: right;
       padding: 15px;
       line-height: 20px;
     }
     
-    a, a:hover, a:focus {
-      text-decoration: none;
-      color: var(--color--pflo--uwblue);
-      border:none;
-      outline: none;
-      box-shadow: none;
+  #block-thmepc-menukontauzytkownika ul a, #block-thmepc-menukontauzytkownika ul a:hover, a:focus {
+    text-decoration: none;
+    color: var(--color--pflo--uwblue);
+    border:none;
+    outline: none;
+    box-shadow: none;
     }
 
-    #toggle-high-contrast:hover {
-      color: var(--color--pflo--salmon);
-    }
-
-    li:hover {
-      background-color: var(--color--bordergray);
-    }
-    li.text-size:hover {
-      background-color:white;
-    }
-    li.text-size a:hover {
-      color:var(--color--pflo--salmon);
-    }
-
-    li.menu-item {
-      float:left;
-      list-style: none;
-      padding:0;
-    }
-
-    
-    li.text-size a{
-      padding-left: 1px;
-    }
-    li.text-size:not(:last-child) a{
-      padding-right: 2px;
-    }
-    
-    #toggle-regular-text {
-      font-size: 14px;
-    }
-    #toggle-smaller-text {
-      font-size: 12px;
-    }
-    #toggle-larger-text {
-      font-size: 16px;
-    }
-
+  #toggle-high-contrast:hover {
+    color: var(--color--pflo--salmon);
   }
+
+  #block-thmepc-menukontauzytkownika ul li:hover {
+    background-color: var(--color--bordergray);
+  }
+  #block-thmepc-menukontauzytkownika ul li.text-size:hover {
+    background-color:white;
+  }
+  #block-thmepc-menukontauzytkownika ul li.text-size a:hover {
+    color:var(--color--pflo--salmon);
+  }
+
+  #block-thmepc-menukontauzytkownika ul li.menu-item {
+    float:left !important;
+    list-style: none !important;
+    padding:0;
+    
+  }
+
+  
+  #block-thmepc-menukontauzytkownika ul li.text-size a{
+    padding-left: 1px;
+  }
+  #block-thmepc-menukontauzytkownika ul li.text-size:not(:last-child) a{
+    padding-right: 2px;
+  }
+  
+  #toggle-regular-text {
+    font-size: 14px;
+  }
+  #toggle-smaller-text {
+    font-size: 12px;
+  }
+  #toggle-larger-text {
+    font-size: 16px;
+  }
+
+  
 
   body.larger-text #block-thmepc-menukontauzytkownika ul li.text-size {
     #toggle-larger-text {
