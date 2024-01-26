@@ -77,7 +77,7 @@ body.path-frontpage #search-container {
     clear: both;
   }
 
-  #block-thmepc-menukontauzytkownika ul {
+  #block-thmepc-account-menu ul {
 
     display: table;
     content: " ";
@@ -89,13 +89,13 @@ body.path-frontpage #search-container {
     
   }
 
-  #block-thmepc-menukontauzytkownika ul a {
+  #block-thmepc-account-menu ul a {
       float: right;
       padding: 15px;
       line-height: 20px;
     }
     
-  #block-thmepc-menukontauzytkownika ul a, #block-thmepc-menukontauzytkownika ul a:hover, a:focus {
+  #block-thmepc-account-menu ul a, #block-thmepc-account-menu ul a:hover, a:focus {
     text-decoration: none;
     color: var(--color--pflo--uwblue);
     border:none;
@@ -107,17 +107,17 @@ body.path-frontpage #search-container {
     color: var(--color--pflo--salmon);
   }
 
-  #block-thmepc-menukontauzytkownika ul li:hover {
+  #block-thmepc-account-menu ul li:hover {
     background-color: var(--color--bordergray);
   }
-  #block-thmepc-menukontauzytkownika ul li.text-size:hover {
+  #block-thmepc-account-menu ul li.text-size:hover {
     background-color:white;
   }
-  #block-thmepc-menukontauzytkownika ul li.text-size a:hover {
+  #block-thmepc-account-menu ul li.text-size a:hover {
     color:var(--color--pflo--salmon);
   }
 
-  #block-thmepc-menukontauzytkownika ul li.menu-item {
+  #block-thmepc-account-menu ul li.menu-item {
     float:left !important;
     list-style: none !important;
     padding:0;
@@ -125,10 +125,10 @@ body.path-frontpage #search-container {
   }
 
   
-  #block-thmepc-menukontauzytkownika ul li.text-size a{
+  #block-thmepc-account-menu ul li.text-size a{
     padding-left: 1px;
   }
-  #block-thmepc-menukontauzytkownika ul li.text-size:not(:last-child) a{
+  #block-thmepc-account-menu ul li.text-size:not(:last-child) a{
     padding-right: 2px;
   }
   
@@ -144,7 +144,7 @@ body.path-frontpage #search-container {
 
   
 
-  body.larger-text #block-thmepc-menukontauzytkownika ul li.text-size {
+  body.larger-text #block-thmepc-account-menu ul li.text-size {
     #toggle-larger-text {
       text-decoration: underline; 
     }
@@ -155,7 +155,7 @@ body.path-frontpage #search-container {
       text-decoration: none; 
     }
   }
-  body.smaller-text #block-thmepc-menukontauzytkownika ul li.text-size {
+  body.smaller-text #block-thmepc-account-menu ul li.text-size {
     #toggle-smaller-text {
       text-decoration: underline;
     }
@@ -167,7 +167,7 @@ body.path-frontpage #search-container {
     }
   }
 
-  body:not(.smaller-text):not(.larger-text) #block-thmepc-menukontauzytkownika ul li.text-size #toggle-regular-text{
+  body:not(.smaller-text):not(.larger-text) #block-thmepc-account-menu ul li.text-size #toggle-regular-text{
     text-decoration: underline;
   } 
 
