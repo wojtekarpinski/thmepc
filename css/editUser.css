@@ -73,3 +73,10 @@ body.path-user #user-form .vertical-tabs__menu-link-content strong{
     margin-bottom: 0.5em;
     margin-left: 0.5em;
   }
+
+
+  /* LAST MINUTE CHOWANKO */
+
+  #block-thmepc-page-title {
+    display: none;
+  }
