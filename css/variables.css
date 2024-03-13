@@ -21,7 +21,7 @@
   --color--hc--yellow: #FFFF00;
 
   /* Overriding Claro colors */
-  --color-absolutezero: var(--color--pflo--salmon);
+  --color-absolutezero: var(--color--accent);
   --color-absolutezero-hover: var(--color--pflo--uwblue);
-  --color-focus: var(--color--pflo--salmon);
+  --color-focus: var(--color--pflo--accent);
 }

@@ -137,7 +137,7 @@
   /* user profile header styling */
 
 .ep-usr-name {
-    background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
+    background: url(/themes/custom/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
     color: var(--color--txtwbg);
     background-size: 318px;
     border-radius: 5px;
@@ -159,4 +159,32 @@
   
   body.path-user div.tab-content div.field--item article > h5 > span {
     display:list-item;
+  }
+
+
+/* User section <details> styling fixes */
+
+  body.path-user details.claro-details {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  body.path-user summary.claro-details__summary {
+    display: none;
+  }
+
+  /* Vertical tabs styling */
+
+  body.path-user .field-group-tabs-wrapper ul li a {
+    border-radius: 4px 0 0 4px;
+  }
+
+  body.path-user .field-group-tabs-wrapper ul li.is-selected a, body.path-user .field-group-tabs-wrapper ul li.is-selected a:hover{
+    background-color: var(--color--accent);
+    color: var(--color--txtwbg);
+  }
+
+  body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::before, body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::after {
+    display:none;
   }

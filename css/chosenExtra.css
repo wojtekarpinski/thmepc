@@ -1,0 +1,49 @@
+/* --- Chosen styles --- */
+.chosen-container.form-element {
+    padding: 0px;
+    border: solid 1px var(--color--bordergray);
+    border-radius: 5px;
+}
+
+.chosen-container.form-element:hover {
+    box-shadow: 1px 1px 15px var(--color--accent);
+}
+
+.chosen-container.form-element .chosen-choices {
+    height: calc(100% - 2px);
+    border: 0px none;
+}
+
+.chosen-container.form-element.chosen-container-active .chosen-choices,
+.chosen-container.form-element.chosen-container-active .chosen-drop {
+    border-color: var(--color--accent);
+}
+
+.chosen-container-multi.form-element .chosen-choices li.search-choice,
+.chosen-container.form-element.chosen-container-active .chosen-results li.highlighted {
+    background-color: var(--color--accent);
+    color: #fff;
+}
+
+.chosen-container-multi.form-element .chosen-drop .result-selected {
+    color: var(--color--accent);
+}
+
+.chosen-container-multi.form-element .chosen-choices li.search-field input[type="text"] {
+    line-height: inherit;
+    
+}
+
+.chosen-container-multi.form-element .chosen-choices li.search-field input[type="text"]::placeholder {
+    opacity: 1;
+    color: #999;
+    
+}
+
+.chosen-container-multi.form-element .chosen-choices {
+    padding: 6.5px 3px;
+}
+
+/* body.path-frontpage input, body.path-frontpage .claro-autocomplete {
+    width: 100%
+} */

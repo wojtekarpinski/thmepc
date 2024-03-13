@@ -223,10 +223,11 @@ body header.content-header {
 
 /* Buttons */
 
-/* .btn-salmon {
-  color:white;
-  background-color: var(--color--accent);
+/* #edit-submit-vws-ep-search {
+  color: var(--color--txtwbg);
+  background-color: var(--color--accent) !important;
 } */
+
 
 button.sidebar {
   width: 90%;
@@ -301,19 +302,36 @@ button.btn-uw:hover {
 
 /* Search forms */
 
-div #search {
+/* div #search {
   width: 66.66%;
+} */
+
+#search-container > div > div > .claro-autocomplete, #search-container > div > div  input{
+    width: 100%;
 }
 
-input.form-control {
+#search-container .form-item {
+  margin-block: 0.5rem;
+}
+
+#search-container > div > div  #edit-submit-vws-ep-search {
+  width: 25%;
+  color: var(--color--txtwbg);
+  background-color: var(--color--pflo--salmon);
+}
+
+body.path-frontpage input.form-element, body.path-szukaj input.form-element {
+  max-height: 12px;
   padding: 1rem;
   border-radius: 5px;
   border: solid 1px var(--color--bordergray);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
-input.form-control:focus {
+body.path-frontpage input.form-element:hover, body.path-szukaj input.form-element:hover {
+  box-shadow: 1px 1px 15px var(--color--accent);
+}
+
+body.path-frontpage input.form-element:focus, body.path-szukaj input.form-element:focus {
   outline:none;
   border-color: var(--color--accent);
   box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(255,137,131, 0.6) ;
@@ -324,6 +342,7 @@ input.form-control:focus {
 } */
 
 #search-selector {
+  display: inline-block;
   width: 100%;
   text-align: right;
   border: none 1px;
@@ -334,10 +353,9 @@ input.form-control:focus {
   margin-bottom: 0.5rem;
 }
 
-#advanced-search {
+body.path-frontpage .js-form-type-textfield:not(.form-item--combine), body.path-frontpage .js-form-type-select,  body.path-szukaj .js-form-type-textfield:not(.form-item--combine), body.path-szukaj .js-form-type-select{
   display: none;
 }
-
 
 
 /* e-P view list styling */
