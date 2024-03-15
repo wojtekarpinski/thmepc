@@ -122,7 +122,7 @@
   
   
   /* User research topics */
-  #edit-group-usr-dsp-scientific--content .field--name-field-usr-research-keywords .field--items > .field--item {
+  .field--name-field-usr-research-keywords .field__items > .field__item {
   
     display: inline-block;
     background: var(--color--accent);

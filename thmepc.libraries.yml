@@ -12,6 +12,7 @@ global-styling:
       css/searchResults.css: {}
       css/chosenExtra.css: {}
       css/icomoon.css: {}
+      css/search.css: {}
   js:
       scripts/searchSelect.js: {}
       scripts/searchFormHandler.js: {}

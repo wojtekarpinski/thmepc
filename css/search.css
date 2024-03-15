@@ -44,7 +44,7 @@ body.path-frontpage input.form-element:focus, body.path-szukaj input.form-elemen
   margin-bottom: 0.5rem;
 }
 
-body.path-frontpage .js-form-type-textfield:not(.form-item--combine), body .path-frontpage .js-form-type-select,  body.path-szukaj .js-form-type-textfield:not(.form-item--combine), body.path-szukaj .js-form-type-select{
+body.path-frontpage .js-form-type-textfield:not(.form-item--combine), body.path-frontpage .js-form-type-select,  body.path-szukaj .js-form-type-textfield:not(.form-item--combine), body.path-szukaj .js-form-type-select{
   display: none;
 }
 
