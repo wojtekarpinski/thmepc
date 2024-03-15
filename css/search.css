@@ -42,6 +42,12 @@ body.path-frontpage input.form-element:focus, body.path-szukaj input.form-elemen
   background: none;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  color: var(--color--pflo--blue);
+}
+
+#search-selector:hover {
+  color: var(--color--come);
+  text-decoration: underline;
 }
 
 body.path-frontpage .js-form-type-textfield:not(.form-item--combine), body.path-frontpage .js-form-type-select,  body.path-szukaj .js-form-type-textfield:not(.form-item--combine), body.path-szukaj .js-form-type-select{
