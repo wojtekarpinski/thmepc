@@ -72,6 +72,12 @@
         border-right: 1px solid var(--color--bordergray);
         
       }
+
+
+      /* Search button width fix */
+      #search-container > div > div#edit-actions > input#edit-submit-vws-ep-search {
+        width: 100%;
+      }
   
       #contact-info {
         flex-direction: column;
@@ -121,6 +127,8 @@
                 body.path-frontpage div.region-content {
                   background-position: right, 120px 0%;
                 }
+
+                
     
               }
           }
