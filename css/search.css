@@ -64,7 +64,7 @@ body.path-frontpage #search-container {
 
   /* SEARCH PAGE */
   
-  #block-thmepc-exposedformvws-ep-searchep-pg-srch {
+  #block-thmepc-exposedformvws-ep-searchep-pg-srch, #block-thmepc-udostepnionyformularzvws-ep-searchep-pg-srch {
     flex-direction: column;
   }
 
