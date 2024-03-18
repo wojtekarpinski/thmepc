@@ -152,7 +152,7 @@
   
   /* Anti-clearfix fix (eliminates empty vertical spaces) */
 
-  body.path-user article > div.content {
+  body.path-user article > div.content, body.path-user .claro-details__wrapper > div.field {
     display: table;
   }
   
