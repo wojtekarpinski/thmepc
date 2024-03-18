@@ -82,29 +82,29 @@
   
   
     /*Link separator */
-  .field--name-field-usr-pers-webpage-url .field--items div:not(:last-child)::after {
+  .field--name-field-usr-pers-webpage-url .field__items div:not(:last-child)::after {
     content:",\20"
   }
   
     /* Con jobs presentation */
   
-  #usr-con-job .field--item > article > div , .grid-column-1-1{
+  #usr-con-job .field__item > article > div , .grid-column-1-1{
     display:grid;
     grid-template-columns: 1fr 1fr;
   }
   
-   #usr-con-job .field--items{
+   #usr-con-job .field__items{
     display:flex;
     flex-direction: column;
   }
   
-  #usr-con-job .field--items, #usr-contact-data {
+  #usr-con-job .field__items, #usr-contact-data {
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--color--bordergray);
   }
   
-  .field--name-field-usr-pers-webpage-url .field--items {
+  .field--name-field-usr-pers-webpage-url .field__items {
     display:flex;
     flex-direction: row;
     gap: 5px;
@@ -115,7 +115,7 @@
     padding-bottom: 5px;
   }
   
-  .field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field--item {
+  .field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field__item {
     display: flex;
   }
   
@@ -153,12 +153,19 @@
   
   /* USER elements listing*/
   
-  body.path-user div.tab-content div.field--item article {
+  body.path-user details div.field__item article {
     margin-left: 1em;
   }
   
-  body.path-user div.tab-content div.field--item article > h5 > span {
+  body.path-user details div.field__item article > h5 > span {
     display:list-item;
+  }
+
+  body.path-user details div.field__item article > h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
   }
 
 
