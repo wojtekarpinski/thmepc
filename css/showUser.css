@@ -150,6 +150,11 @@
     transform: translateY(1em);
   }
   
+  /* Anti-clearfix fix (eliminates empty vertical spaces) */
+
+  body.path-user article > div.content {
+    display: table;
+  }
   
   /* USER elements listing*/
   
