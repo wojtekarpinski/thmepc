@@ -149,6 +149,11 @@
   .ep-usr-image {
     transform: translateY(1em);
   }
+
+  /*Hiding country info in job*/
+  #usr-con-job .field--name-field-aux-country {
+    display: none;
+  }
   
   /* Anti-clearfix fix (eliminates empty vertical spaces) */
 
