@@ -52,6 +52,10 @@ div[data-off-canvas-main-canvas=""] {
   color: var(--color--come);
 }
 
+#block-thmepc-page-title h1 span{
+  font-weight: initial;
+}
+
 #frontpage-content{
   text-align: justify;
   text-justify: inter-word;
@@ -173,15 +177,25 @@ div[data-off-canvas-main-canvas=""] {
 
 /* Dodanie tła na cały region-content */
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:700px) and (-webkit-max-device-pixel-ratio: 1.25){
   body.path-frontpage div.region-content { 
     background-image:url("../files/ludz.svg"), url(../files/plama.svg);
-    background-position: right;
+    background-position: 72vw center,50vw center;
     background-repeat: no-repeat;
     background-size: auto, auto 100%;
   }
   
 }
+@media screen and (min-width:700px) and (-webkit-max-device-pixel-ratio: 1){
+  body.path-frontpage div.region-content { 
+    background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+    background-position: 68vw center,54vw center;
+    background-repeat: no-repeat;
+    background-size: auto, auto 100%;
+  }
+  
+}
+
 
 
 /* CLARO HEADER */
@@ -192,11 +206,19 @@ body header.content-header {
 
 /*Content region*/
 
-body.path-frontpage main > .region-content {
+/* body.path-frontpage main > .region-content {
   width: 66%;
   margin: auto;
+} */
+div.page-wrapper header.content-header {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
+.layout-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 /* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
 #block-thmepc-informacjekontaktowe {
