@@ -200,3 +200,8 @@
   body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::before, body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::after {
     display:none;
   }
+
+  body.path-user .vertical-tabs > .vertical-tabs__items {
+    border:none;
+    box-shadow: none;
+  }
