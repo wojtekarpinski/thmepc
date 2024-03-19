@@ -7,6 +7,12 @@
 }
 
 
+@media screen and (max-width:1200px) {
+  #block-thmepc-fundatorzy {
+    width: 100%;
+  }
+}
+
 /* Branding: logos shortening and widening */
 
 @media screen and (max-width:768px) {
@@ -49,8 +55,12 @@
       background-repeat: no-repeat;
     }
 
-    #block-thmpflo-fundatorzy img{
-      max-width: 25%;
+    #block-thmepc-fundatorzy > div > div{
+      flex-direction: column;
+    }
+
+    #block-thmepc-fundatorzy img {
+      padding-bottom: 10px;
     }
 
     @media screen and (max-width: 700px) {
