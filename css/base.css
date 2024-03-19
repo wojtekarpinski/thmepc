@@ -52,9 +52,10 @@ div[data-off-canvas-main-canvas=""] {
   color: var(--color--come);
 }
 
-#block-thmepc-page-title h1 span{
-  font-weight: initial;
+#block-thmepc-page-title h1 span, body.path-frontpage main .views-exposed-form h2{
+  font-weight: normal;
 }
+
 
 #frontpage-content{
   text-align: justify;
