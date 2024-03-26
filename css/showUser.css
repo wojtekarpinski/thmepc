@@ -150,8 +150,19 @@
     transform: translateY(1em);
   }
 
+  /* Hiding years in job in user brief */
+  #usr-pers-data #usr-con-job .field--type-yearonly {
+    display: none;
+  }
+
   /*Hiding country info in job*/
-  #usr-con-job .field--name-field-aux-country {
+  #usr-pers-data #usr-con-job .field--name-field-aux-country {
+    display: none;
+  }
+
+
+  /*hiding previous jobs from brief*/
+  #usr-pers-data #usr-con-job .field__items > .field__item:has(.field--name-field-year-end) {
     display: none;
   }
   
