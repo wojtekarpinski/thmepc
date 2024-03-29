@@ -7,9 +7,9 @@ Drupal.behaviors.thmpflo =
 {
     attach: function (context, settings)
     {
-        console.log("switchToMobile init");
+        //console.log("switchToMobile init");
         if(document.body.classList.contains("path-portfolio")){
-            console.log("path-portfolio in body detected");
+            //console.log("path-portfolio in body detected");
             if(window.screen.width <= 600) {
                 console.log("width lower than 600");
                 var sideMenu = document.getElementById("block-cci-ep-sections");
@@ -19,7 +19,7 @@ Drupal.behaviors.thmpflo =
 
                 for(let key in subGroup) {
                     //add class .ep-sg-mobile to each h2 in ep-sub-group
-                    console.log("Looping inside subGroup, key: ", key);
+                    //console.log("Looping inside subGroup, key: ", key);
                     subGroup[key].classList.add("cci-expanded");
                     subGroup[key].childNodes[0].classList.add("ep-sg-mobile") //displays h2 with .ep-sg-mobile styling
                     subGroup[key].childNodes[0].addEventListener("click", function() {
@@ -28,8 +28,8 @@ Drupal.behaviors.thmpflo =
                 }
                 //adds .cci-expanded to clicked h2 parent
                 function expand(clickedObj, subGroup) {
-                    console.log("expand init");
-                    console.log("ev: ", clickedObj);
+                    //console.log("expand init");
+                    //console.log("ev: ", clickedObj);
                     // Checks if .cci-expanded is present
                     if(clickedObj.target.ParentNode.classList.contains("cci-expanded") == false) {
                        /* 

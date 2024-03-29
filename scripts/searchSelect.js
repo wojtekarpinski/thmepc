@@ -29,12 +29,12 @@ function searchSelect() {
         if (localStorage.searchState === "basic") {
             showAdvanced(searchFormItems, basicField, inputs, searchSwitch);
             localStorage.searchState = "advanced";
-            console.log("was basic, switching to advanced")
-            console.log(localStorage.searchState);
+            //console.log("was basic, switching to advanced")
+            //console.log(localStorage.searchState);
         } else {
             showBasic(searchFormItems, basicField, inputs, searchSwitch);
             localStorage.searchState = "basic";
-            console.log("was advanced, switching to basic");
+            //console.log("was advanced, switching to basic");
         }
     }
 

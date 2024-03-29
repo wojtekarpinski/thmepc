@@ -8,8 +8,8 @@ Drupal.behaviors.searchState =
                 let itemsNb = formItems.length;
                 let tempState = localStorage.searchState;
                 let searchSwitch = document.getElementById("search-selector");
-                console.log("initial searchState:");
-                console.log(tempState);
+                //console.log("initial searchState:");
+                //console.log(tempState);
                 if(typeof tempState === 'undefined') 
                 {
                     localStorage.searchState = 'basic';
