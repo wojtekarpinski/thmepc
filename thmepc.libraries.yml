@@ -21,5 +21,6 @@ global-styling:
       scripts/toggleLargerText.js: {}
       scripts/toggleSmallerText.js: {}
       scripts/setProfileColor.js: {}
+      scripts/currentPosition.js: {}
 
 

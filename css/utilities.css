@@ -85,3 +85,10 @@
     margin-bottom:5px;
   }
   
+
+    /* Disables end year field when current position checkbox is checked */
+    .disabled-select {
+      pointer-events: none;
+      background-color: #f2f2f2; 
+      color: #999; 
+    }

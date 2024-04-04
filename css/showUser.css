@@ -150,16 +150,64 @@
     transform: translateY(1em);
   }
 
-  /* Hiding years in job in user brief */
-  #usr-pers-data #usr-con-job .field--type-yearonly {
+  /* Hiding years, country and current position info in job in user brief */
+  #usr-con-job .field--name-field-aux-years-range, #usr-con-job .field--name-field-aux-country, #usr-con-job .field--name-field-current-position {
+    display: none;
+  } 
+
+  /* Hide old position  from brief */
+  #usr-con-job article:has(.field__item):has(span.old-position) {
     display: none;
   }
 
-  /*Hiding country info in job*/
-  #usr-pers-data #usr-con-job .field--name-field-aux-country {
+  /* Hide current position info in #usr-held-positions */
+
+  #usr-held-positions .field--name-field-current-position {
     display: none;
   }
 
+  /* #usr-held-positions .field--name-field-current-position:has(.field__item):has(span.old-position) ~ .field--name-field-aux-years-range time:nth-child(2) {
+    background-color: green;
+  } */
+
+  /* Hide dummy end date for current employment position */
+  #usr-held-positions .field--name-field-current-position:has(.field__item):has(span.current-position) ~ .field--name-field-aux-years-range time:nth-child(2) {
+    display:none;
+  }
+
+  /* Hide field labels to get formatting: 2001 - 2009: position, unit */
+  #usr-held-positions .field__label {
+    display: none;
+  }
+
+  /* Display whole job position as one line */
+  #usr-held-positions .field__items > .field__item > article > div {
+    display: flex;
+  }
+
+  /* Simulate list style */
+  #usr-held-positions .field__items > .field__item > article > div::before {
+    content: "▪️ ";
+  }
+  
+  
+  
+  #usr-held-positions .field--name-field-aux-years-range .field__item time:nth-child(2)::after {
+    content:": ";
+  }
+  
+
+  #usr-held-positions .field--name-field-job-position {
+    font-weight: bold;
+    
+  }
+  #usr-held-positions .field--name-field-job-position .field__item::after {
+    content: ",";
+  }
+
+  #usr-held-positions .field__items > .field__item {
+    padding: 1rem 0;
+  }
 
   /*hiding previous jobs from brief*/
   #usr-pers-data #usr-con-job .field__items > .field__item:has(.field--name-field-year-end) {
@@ -167,7 +215,6 @@
   }
   
   /* Anti-clearfix fix (eliminates empty vertical spaces) */
-
   body.path-user article > div.content, body.path-user .claro-details__wrapper > div.field {
     display: table;
   }
