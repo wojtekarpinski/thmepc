@@ -1,73 +1,77 @@
 (function ($) {
-    Drupal.behaviors.currentPositionBehavior = {
+  Drupal.behaviors.currentPositionBehavior = {
       attach: function (context, settings) {
-        // Select all checkboxes with the same selector
-        const checkboxes = $(".field--name-field-current-position input", context);
-        
-        checkboxes.each(function() {
-          // Find the common parent container
-          const parentContainer = $(this).closest('#inline-entity-form-field_usr_jobs-form');
-          
-          // Find the index of the checkbox relative to its siblings within the common parent
-          const index = parentContainer.find('.field--name-field-current-position input').index(this);
-          
-          // Select the corresponding select element
-          const selectElement = parentContainer.find('[data-drupal-selector="edit-field-usr-jobs-form-inline-entity-form-entities-' + index + '-form-field-aux-years-range-0-end-value-year"]');
-          
-          // Check initial state of checkbox
-          if ($(this).is(':checked')) {
-            
-            //console.log('Checkbox at index ' + index + ' is checked');
-            
-            selectElement.addClass('disabled-select');
-            selectElement.prop('readonly', true);
-            selectElement.prepend('<option value="2050">Rok</option>');
-            selectElement.val('2050');
-            
-          } else {
-            // Checkbox is unchecked.
-            //console.log('Checkbox at index ' + index + ' is unchecked');
-            // Remove the class from the select element
-            selectElement.removeClass('disabled-select');
-            
-          }
-        });
-        
-        checkboxes.change(function() {
-          // Find the common parent container
-          const parentContainer = $(this).closest('#inline-entity-form-field_usr_jobs-form');
-          
-          // Find the index of the checkbox relative to its siblings within the common parent
-          const index = parentContainer.find('.field--name-field-current-position input').index(this);
-          
-          // Select the corresponding select element
-          const selectForEdit = parentContainer.find('[data-drupal-selector="edit-field-usr-jobs-form-inline-entity-form-entities-' + index + '-form-field-aux-years-range-0-end-value-year"]');
-          const selectForNew = parentContainer.find('[data-drupal-selector="edit-field-usr-jobs-form-' + index + '-field-aux-years-range-0-end-value-year"]');
-          const selectElement = selectForEdit.add(selectForNew);
-          
-          if ($(this).is(':checked')) {
-            
-            //console.log('Checkbox at index ' + index + ' is checked');
-            
+          // Select all checkboxes with the same selector
+          const checkboxes = $(".field--name-field-current-position input", context);
 
-            selectElement.addClass('disabled-select');
-            selectElement.prop('readonly', true);
-            selectElement.prepend('<option value="2050">Rok</option>');
-            selectElement.val('2050');
-            
-          } else {
-            // Checkbox is unchecked.
-            //console.log('Checkbox at index ' + index + ' is unchecked');
-            // Remove the class from the select element
-            selectElement.removeClass('disabled-select');
-            selectElement.prop('readonly', false);
-            selectElement.val('');
-            selectElement.find('option[value="2050"]').remove();
+          checkboxes.each(function () {
+              
 
-            
-          }
-        });
+              // Get the name attribute of the checkbox
+              const name = $(this).attr('name');
+
+              //get the index value from the name attribute
+              const match = /\[(\d+)\]/.exec(name);
+              if (match && match[1]) {
+                  const index = parseInt(match[1]);
+
+                  //console.log('Index:', index);
+
+
+                  handleCheckbox.call(this, index, false);
+                  
+              }
+          });
+
+          checkboxes.change(function () {
+              // Get the name attribute of the checkbox
+              const name = $(this).attr('name');
+
+              //get the index value from the name attribute
+              const match = /\[(\d+)\]/.exec(name);
+              if (match && match[1]) {
+                  const index = parseInt(match[1]);
+
+                  //console.log('Index:', index);
+
+                  handleCheckbox.call(this, index, true);
+              }
+          });
       }
-    };
-  })(jQuery);
+  };
+
+  // Function to handle checkbox apparition/change event
+  function handleCheckbox(index, isChanged) {
+      // Find the common parent container
+      const parentContainer = $(this).closest('#inline-entity-form-field_usr_jobs-form');
+
+      // Select the corresponding select element based on the index value
+      const selectForEdit = parentContainer.find('[data-drupal-selector="edit-field-usr-jobs-form-inline-entity-form-entities-' + index + '-form-field-aux-years-range-0-end-value-year"]');
+      const selectForNew = parentContainer.find('[data-drupal-selector="edit-field-usr-jobs-form-' + index + '-field-aux-years-range-0-end-value-year"]');
+      const selectElement = selectForEdit.add(selectForNew);
+      //const selectElement = $('[data-drupal-selector="edit-field-usr-jobs-form-inline-entity-form-entities-' + index + '-form-field-aux-years-range-0-end-value-year"]');
+
+      if ($(this).is(':checked')) {
+          //console.log('Checkbox at index ' + index + ' is checked');
+          selectElement.addClass('disabled-select');
+          selectElement.prop('readonly', true);
+          selectElement.prepend('<option value="2050">Rok</option>');
+          selectElement.val('2050');
+      } else {
+
+          if(isChanged == true) {
+              //console.log('Checkbox at index ' + index + ' is unchecked');
+              selectElement.removeClass('disabled-select');
+              selectElement.prop('readonly', false);
+              selectElement.val('');
+              selectElement.find('option[value="2050"]').remove();
+          } else {
+               //console.log('Checkbox at index ' + index + ' is unchecked');
+               selectElement.removeClass('disabled-select');
+               selectElement.prop('readonly', false);
+          }
+      }
+  }
+
   
+})(jQuery);
