@@ -16,6 +16,7 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   sidebar_first: 'First sidebar'
+  footer: 'Footer'
 
 libraries:
   - 'thmepc/global-styling'

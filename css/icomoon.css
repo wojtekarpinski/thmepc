@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?v45ub5');
-  src:  url('../fonts/icomoon.eot?v45ub5#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?v45ub5') format('truetype'),
-    url('../fonts/icomoon.woff?v45ub5') format('woff'),
-    url('../fonts/icomoon.svg?v45ub5#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?26a7fv');
+  src:  url('../fonts/icomoon.eot?26a7fv#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?26a7fv') format('truetype'),
+    url('../fonts/icomoon.woff?26a7fv') format('woff'),
+    url('../fonts/icomoon.svg?26a7fv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-eye"], [class*=" icon-eye"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon'!important;
+  font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -27,4 +27,10 @@
 
 .icon-eye:before {
   content: "\e9ce";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-down:before {
+  content: "\ea43";
 }

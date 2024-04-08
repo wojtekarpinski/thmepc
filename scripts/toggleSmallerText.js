@@ -4,10 +4,10 @@ Drupal.behaviors.toggleSmallerText = {
             //console.log("creating smallerText in localStorage");
             localStorage.setItem("smallerText", JSON.stringify(false));
         }
-        console.log(localStorage.smallerText);
+        //console.log(localStorage.smallerText);
 
         function switcher() {
-            console.log("switcher init");
+            //console.log("switcher init");
             if(JSON.parse(localStorage.getItem("smallerText")) === true) {
                 //console.log("Adding class to body");
                 document.body.classList.add("smaller-text");

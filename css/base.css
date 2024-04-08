@@ -52,14 +52,17 @@ div[data-off-canvas-main-canvas=""] {
   color: var(--color--come);
 }
 
+#block-thmepc-page-title h1 span, body.path-frontpage main .views-exposed-form h2{
+  font-weight: normal;
+}
+
+
 #frontpage-content{
   text-align: justify;
   text-justify: inter-word;
 }
 
-body.path-frontpage #search-container {
-  width: 69%;
-}
+
 
 .w-80 {
   width: 80%;
@@ -175,42 +178,61 @@ body.path-frontpage #search-container {
 
 /* Dodanie tła na cały region-content */
 
-@media screen and (min-width:700px) {
+@media screen and (min-width:700px) and (-webkit-max-device-pixel-ratio: 1.25){
   body.path-frontpage div.region-content { 
     background-image:url("../files/ludz.svg"), url(../files/plama.svg);
-    background-position: right;
+    background-position: 72vw center,50vw center;
+    background-repeat: no-repeat;
+    background-size: auto, auto 100%;
+  }
+  
+}
+@media screen and (min-width:700px) and (-webkit-max-device-pixel-ratio: 1){
+  body.path-frontpage div.region-content { 
+    background-image:url("../files/ludz.svg"), url(../files/plama.svg);
+    background-position: 68vw center,54vw center;
     background-repeat: no-repeat;
     background-size: auto, auto 100%;
   }
   
 }
 
-/* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
-footer.container-fluid { 
-  padding-left: 0;
-  padding-right: 0;
-  width:100%;
-}
 
-#block-thmpflo-informacjekontaktowe {
-  background-color: var(--color--lightgray);
-}
+
 /* CLARO HEADER */
 
 body header.content-header {
   background-color: white;
 }
 
+/*Content region*/
 
+/* body.path-frontpage main > .region-content {
+  width: 66%;
+  margin: auto;
+} */
+div.page-wrapper header.content-header {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.layout-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Dodanie szarego tła na całej szerokości przy informacjach kontaktowych */
 #block-thmepc-informacjekontaktowe {
-  width: 100vw;
-  margin-right: -3rem;
-  margin-left: -3rem;
   background-color: var(--color--lightgray);
 
-  address {
-    font-style: normal;
-  }
+}
+#block-thmepc-informacjekontaktowe address {
+  font-style: normal;
+}
+
+#block-thmepc-informacjekontaktowe > div, #block-thmepc-fundatorzy {
+  margin: auto;
+  width: 66%;
 }
 
 
@@ -222,11 +244,6 @@ body header.content-header {
 }
 
 /* Buttons */
-
-/* .btn-salmon {
-  color:white;
-  background-color: var(--color--accent);
-} */
 
 button.sidebar {
   width: 90%;
@@ -298,45 +315,6 @@ button.btn-uw:hover {
   filter:brightness(1);
 }
 
-
-/* Search forms */
-
-div #search {
-  width: 66.66%;
-}
-
-input.form-control {
-  padding: 1rem;
-  border-radius: 5px;
-  border: solid 1px var(--color--bordergray);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-input.form-control:focus {
-  outline:none;
-  border-color: var(--color--accent);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(255,137,131, 0.6) ;
-}
-
-/* button[type="submit"] {
-  width: 25%;
-} */
-
-#search-selector {
-  width: 100%;
-  text-align: right;
-  border: none 1px;
-  border-top-style: solid;
-  border-color: var(--color--bordergray);
-  background: none;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-#advanced-search {
-  display: none;
-}
 
 
 

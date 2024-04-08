@@ -82,29 +82,29 @@
   
   
     /*Link separator */
-  .field--name-field-usr-pers-webpage-url .field--items div:not(:last-child)::after {
+  .field--name-field-usr-pers-webpage-url .field__items div:not(:last-child)::after {
     content:",\20"
   }
   
     /* Con jobs presentation */
   
-  #usr-con-job .field--item > article > div , .grid-column-1-1{
+  #usr-con-job .field__item > article > div , .grid-column-1-1{
     display:grid;
     grid-template-columns: 1fr 1fr;
   }
   
-   #usr-con-job .field--items{
+   #usr-con-job .field__items{
     display:flex;
     flex-direction: column;
   }
   
-  #usr-con-job .field--items, #usr-contact-data {
+  #usr-con-job .field__items, #usr-contact-data {
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--color--bordergray);
   }
   
-  .field--name-field-usr-pers-webpage-url .field--items {
+  .field--name-field-usr-pers-webpage-url .field__items {
     display:flex;
     flex-direction: row;
     gap: 5px;
@@ -115,14 +115,14 @@
     padding-bottom: 5px;
   }
   
-  .field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field--item {
+  .field--name-field-usr-jobs article div[class*="field--name-field-job-"] > .field__item {
     display: flex;
   }
   
   
   
   /* User research topics */
-  #edit-group-usr-dsp-scientific--content .field--name-field-usr-research-keywords .field--items > .field--item {
+  .field--name-field-usr-research-keywords .field__items > .field__item {
   
     display: inline-block;
     background: var(--color--accent);
@@ -137,7 +137,7 @@
   /* user profile header styling */
 
 .ep-usr-name {
-    background: url(/themes/contrib/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
+    background: url(/themes/custom/thmpflo/files/wzorek.png) no-repeat right,var(--color--accent);
     color: var(--color--txtwbg);
     background-size: 318px;
     border-radius: 5px;
@@ -149,14 +149,122 @@
   .ep-usr-image {
     transform: translateY(1em);
   }
+
+  /* Hiding years, country and current position info in job in user brief */
+  #usr-con-job .field--name-field-aux-years-range, #usr-con-job .field--name-field-aux-country, #usr-con-job .field--name-field-current-position {
+    display: none;
+  } 
+
+  /* Hide old position  from brief */
+  #usr-con-job article:has(.field__item):has(span.old-position) {
+    display: none;
+  }
+
+  /* Hide current position info in #usr-held-positions */
+
+  #usr-held-positions .field--name-field-current-position {
+    display: none;
+  }
+
+  /* #usr-held-positions .field--name-field-current-position:has(.field__item):has(span.old-position) ~ .field--name-field-aux-years-range time:nth-child(2) {
+    background-color: green;
+  } */
+
+  /* Hide dummy end date for current employment position */
+  #usr-held-positions .field--name-field-current-position:has(.field__item):has(span.current-position) ~ .field--name-field-aux-years-range time:nth-child(2) {
+    display:none;
+  }
+
+  /* Hide field labels to get formatting: 2001 - 2009: position, unit */
+  #usr-held-positions .field__label {
+    display: none;
+  }
+
+  /* Display whole job position as one line */
+  #usr-held-positions .field__items > .field__item > article > div {
+    display: flex;
+  }
+
+  /* Simulate list style */
+  #usr-held-positions .field__items > .field__item > article > div::before {
+    content: "▪️ ";
+  }
   
+  
+  
+  #usr-held-positions .field--name-field-aux-years-range .field__item time:nth-child(2)::after {
+    content:": ";
+  }
+  
+
+  #usr-held-positions .field--name-field-job-position {
+    font-weight: bold;
+    
+  }
+  #usr-held-positions .field--name-field-job-position .field__item::after {
+    content: ",";
+  }
+
+  #usr-held-positions .field__items > .field__item {
+    padding: 1rem 0;
+  }
+
+  /*hiding previous jobs from brief*/
+  #usr-pers-data #usr-con-job .field__items > .field__item:has(.field--name-field-year-end) {
+    display: none;
+  }
+  
+  /* Anti-clearfix fix (eliminates empty vertical spaces) */
+  body.path-user article > div.content, body.path-user .claro-details__wrapper > div.field {
+    display: table;
+  }
   
   /* USER elements listing*/
   
-  body.path-user div.tab-content div.field--item article {
+  body.path-user details div.field__item article {
     margin-left: 1em;
   }
   
-  body.path-user div.tab-content div.field--item article > h5 > span {
+  body.path-user details div.field__item article > h5 > span {
     display:list-item;
+  }
+
+  body.path-user details div.field__item article > h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+
+/* User section <details> styling fixes */
+
+  body.path-user details.claro-details {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 0 4px 4px 0;
+  }
+
+  body.path-user summary.claro-details__summary {
+    display: none;
+  }
+
+  /* Vertical tabs styling */
+
+  body.path-user .field-group-tabs-wrapper ul li a {
+    border-radius: 4px 0 0 4px;
+  }
+
+  body.path-user .field-group-tabs-wrapper ul li.is-selected a, body.path-user .field-group-tabs-wrapper ul li.is-selected a:hover{
+    background-color: var(--color--accent);
+    color: var(--color--txtwbg);
+  }
+
+  body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::before, body.path-user .vertical-tabs__menu-item a.vertical-tabs__menu-link::after {
+    display:none;
+  }
+
+  body.path-user .vertical-tabs > .vertical-tabs__items {
+    border:none;
+    box-shadow: none;
   }
